@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navigation from "./components/navigation";
+import BottomBar from "./components/bottom-bar";
 
 export default function Home() {
   return (
@@ -10,11 +11,21 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo-me.ico" />
       </Head>
-      <main className="flex w-screen flex-col">
+
+      <main className="flex w-screen flex-col items-center justify-center">
         <Navigation />
-        <div className="flex h-auto w-screen flex-col items-center justify-center bg-red-500">
-          <h1 className="text-4xl font-bold">Hello There</h1>
-          <h1 className="text-4xl font-bold">Hello There</h1>
+        <BottomBar />
+        <div className="flex h-screen w-screen flex-col items-center justify-center bg-[#f8f8f8] px-6 font-sans">
+          <span className="text-sm font-bold text-[#2c2c2c] sm:px-0 sm:text-2xl md:w-[684px]">
+            Hi 🙋, I&#39;m{" "}
+            <span className="bg-gradient-to-r from-[#F69C15] to-[#F20BBF] bg-clip-text tracking-[-0.03em] text-transparent">
+              Brata Darmawan
+            </span>{" "}
+            a web developer and visual designer based in Indonesia 🇮🇩. I am an
+            enthusiastic person 🧑‍💻 who is passionate about creating visually
+            appealing, user-friendly designs, and interactive design 🤌 . I am
+            always looking for opportunities to learn and grow 🙌 .
+          </span>
         </div>
       </main>
     </>
