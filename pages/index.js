@@ -1,6 +1,8 @@
+import React from "react";
 import Head from "next/head";
 import Navigation from "./components/navigation";
 import BottomBar from "./components/bottom-bar";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,11 +14,28 @@ export default function Home() {
         <link rel="icon" href="/logo-me.ico" />
       </Head>
 
-      <main className="flex w-screen flex-col items-center justify-center">
+      <main className="flex flex-col items-center justify-center overflow-hidden">
         <Navigation />
         <BottomBar />
-        <div className="flex h-screen w-screen flex-col items-center justify-center bg-[#f8f8f8] px-6 font-sans">
-          <span className="text-sm font-bold text-[#2c2c2c] sm:px-0 sm:text-2xl md:w-[684px]">
+        {/* <div className="flex h-screen w-screen flex-col items-center justify-center bg-[#f8f8f8] px-6 font-sans selection:bg-[#F69C15] selection:text-[#2C2C2C]"> */}
+        <div className="flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-[#141414] px-6 font-sans selection:bg-[#F69C15] selection:text-[#2C2C2C]">
+          {/* <span className="text-sm font-bold text-[#2c2c2c] sm:px-0 md:w-[684px] md:text-2xl xl:text-4xl 2xl:w-[1156px]"> */}
+          <span className="text-justify text-sm font-medium text-[#E2E2E2] sm:px-0 md:w-[684px] md:text-2xl xl:text-4xl 2xl:w-[1156px]">
+            Hi 🙋, I&#39;m{" "}
+            <span className="cursor-pointer bg-gradient-to-r from-[#F69C15] to-[#F20BBF] bg-clip-text font-bold tracking-[-0.05em] text-transparent">
+              <Link href="mailto:work.brata@gmail.com?subject=Hello">
+                Brata Darmawan
+              </Link>
+            </span>{" "}
+            a web developer and visual designer based in Indonesia 🇮🇩. I am an
+            enthusiastic person 🧑‍💻 who is passionate about creating visually
+            appealing, user-friendly designs, and interactive design 🤌 . I am
+            always looking for opportunities to learn and grow 🙌 .
+          </span>
+        </div>
+        <div className="flex h-[800px] w-screen flex-col items-center justify-center overflow-hidden bg-[#f4f4f4] px-6 font-sans selection:bg-[#F69C15] selection:text-[#2C2C2C]">
+          {/* <span className="text-sm font-bold text-[#2c2c2c] sm:px-0 md:w-[684px] md:text-2xl xl:text-4xl 2xl:w-[1156px]"> */}
+          <span className="text-sm font-bold text-[#141414] sm:px-0 md:w-[684px] md:text-2xl xl:text-4xl 2xl:w-[1156px]">
             Hi 🙋, I&#39;m{" "}
             <span className="bg-gradient-to-r from-[#F69C15] to-[#F20BBF] bg-clip-text tracking-[-0.03em] text-transparent">
               Brata Darmawan
